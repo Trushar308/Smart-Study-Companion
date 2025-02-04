@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Study Companion</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Mstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <style>
       .menu-bar {
@@ -51,34 +55,25 @@
       }
     </style>
   </head>
+
   <body>
-    <nav class="navbar">
-      <div class="brand">
-        <img src="logo.png" alt="Brand Logo" />
-        <span id="brand_name">Smart Study Companion</span>
+    <nav class="nav">
+      <i class="uil uil-bars navOpenBtn"></i>
+      <img src="logo.png" alt="Brand Logo" />
+      <a href="#" class="logo">Smart Study Companion</a>
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+      <div class="search-box">
+        <i class="uil uil-search search-icon"></i>
+        <input type="text" placeholder="Search here..." />
       </div>
-      <ul>
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-          crossorigin="anonymous"
-        />
-        <form action="">
-          <input type="search" autofocus required />
-          <i class="fa fa-search"></i>
-          <button onclick="clearInput()">Clear</button>
-        </form>
-      </ul>
-    </nav>
-    <nav class="menu-bar">
-      <span class="menu-toggle" onclick="toggleMenu()">☰ Menu</span>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
     </nav>
     <main class="main-section">
       <div class="left-content">
@@ -102,11 +97,8 @@
         </lord-icon>
       </div>
     </main>
-    <script>
-      function toggleMenu() {
-        const menu = document.querySelector(".menu-bar ul");
-        menu.classList.toggle("active");
-      }
-    </script>
+
+    <div class="menu"></div>
+    <script src="Mscript.js"></script>
   </body>
 </html>
