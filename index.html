@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Study Companion</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <style>
+      .menu-bar {
+        display: flex;
+        justify-content: center;
+        background-color: #1b1c1e;
+        padding: 10px;
+      }
+      .menu-bar ul {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .menu-bar li {
+        margin-right: 20px;
+      }
+      .menu-bar a {
+        text-decoration: none;
+        color: #84dfd2;
+      }
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        color: #84dfd2;
+        font-size: 24px;
+      }
+      @media (max-width: 768px) {
+        .menu-bar ul {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          background-color: #1b1c1e;
+          width: 100%;
+          top: 50px;
+          left: 0;
+        }
+        .menu-bar ul.active {
+          display: flex;
+        }
+        .menu-toggle {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand">
+        <img src="logo.png" alt="Brand Logo" />
+        <span id="brand_name">Smart Study Companion</span>
+      </div>
+      <ul>
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous"
+        />
+        <form action="">
+          <input type="search" autofocus required />
+          <i class="fa fa-search"></i>
+          <button onclick="clearInput()">Clear</button>
+        </form>
+      </ul>
+    </nav>
+    <nav class="menu-bar">
+      <span class="menu-toggle" onclick="toggleMenu()">☰ Menu</span>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main class="main-section">
+      <div class="left-content">
+        <h1>Welcome to Smart Study Companion</h1>
+        <p>
+          Unlock your potential with personalized learning and smart planning
+        </p>
+        <div class="wrapper">
+          <a href="#"><span>Start Free Today</span></a>
+        </div>
+      </div>
+      <div class="right-content">
+        <lord-icon
+          src="https://cdn.lordicon.com/fttvwdlw.json"
+          trigger="loop"
+          stroke="bold"
+          state="loop-roll"
+          colors="primary:#1b1c1e,secondary:#84dfd2"
+          style="width: 250px; height: 250px"
+        >
+        </lord-icon>
+      </div>
+    </main>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".menu-bar ul");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
